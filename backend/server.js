@@ -12,9 +12,11 @@ app.use(express.urlencoded( {
   extended : false
 }))
 const goalRoutes = require("./routes/goalRoutes");
+const userRoutes = require("./routes/userRoute");
+
 
 app.use("/api/goals", goalRoutes);
-
+app.use("/api/users", userRoutes);
 
 app.use(errorHandler)
 app.listen(port, () => {
