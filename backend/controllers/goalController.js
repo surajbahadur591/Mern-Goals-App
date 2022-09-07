@@ -6,12 +6,9 @@ const Goal = require('../models/goalsModel')
 // @access Private 
 
 const getGoals = asyncHandler(async (req, res) => {
-  
-  // console.log(req.body)
 
   const goals = await Goal.find()
   res.status(200).json(goals);
-
 })
 
 // @desc   Set goals 

@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
+
 const {
   getGoals,
   setGoals,
   UpdateGoals,
   DeleteGoals,
 } = require("../controllers/goalController");
+
 
 router.get("/", getGoals);
 
